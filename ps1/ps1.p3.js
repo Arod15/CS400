@@ -11,8 +11,7 @@ const expr2 = valFunc('supercalifragilisticexpialidocious', str => {
         numberReplaced: str.split('a').length - 1,
         length: str.length
     };
-}
-);
+});
 
 console.log(expr1);
 console.log(expr2);
