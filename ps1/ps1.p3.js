@@ -1,7 +1,7 @@
 const valFunc = (val, func) => func(val);
 
 // split(str) splits the string but it removes the delimeter str from return arr
-const expr1 = valFunc('supercalifragilisticexpialidocious', str => ((str.replace(/c/g, 'cC')).split('c')).map(x => x.toLowerCase()));
+const expr1 = valFunc('supercalifragilisticexpialidocious', str => str.replace(/c/g, '*c').split('*'));
 
 const expr2 = valFunc('supercalifragilisticexpialidocious', str => {
     return {
