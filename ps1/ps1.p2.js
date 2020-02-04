@@ -1,6 +1,7 @@
 const p2 = (expr) => {
     let [left, op, right] = expr.split("");
-    return operation(op)(left, right);
+    return operation(op)(parseInt(left), parseInt(right));
+    // return eval(expr);
 };
 
 const operation = (op) => {
