@@ -15,10 +15,9 @@ function* fibs2() {
     }
 }
 
-const myFibs2 = fibs2();
 let count = 6;
-for (fib2 of myFibs2) {
-    if (count === 0) return;
+for (fib2 of fibs2()) {
+    if (count === 0) break;
     console.log(fib2);
     count--;
 }
