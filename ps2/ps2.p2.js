@@ -4,7 +4,6 @@ function* p2 (string) {
         yield wordArr[wordIndex];
     }
 }
-const string = 'All I know is something like a bird within her sang';
-for (word of p2(string)) {
+for (word of p2('All I know is something like a bird within her sang')) {
     console.log(word);
 }
