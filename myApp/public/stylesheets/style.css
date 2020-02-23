@@ -6,3 +6,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+h1 {
+  font-size: 3em;
+  color: blue;
+}
+
+p {
+  font-size: 2em;
+}
+
+span {
+  font-style: italic;
+  color: green;
+}
