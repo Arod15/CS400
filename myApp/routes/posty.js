@@ -1,10 +1,12 @@
 const expr = require('express');
 const router = expr.Router();
 
-router.post('/:str', function(req, res) {
-    const str = req.params['str'];
+
+router.post('/', function(req, res) {
+    const str = req.body['str'];
     const response = {'originalString': str, 'stringLength': str.length};
-    res.send(response);
+    res.render('postIndexFile', response);
+    // res.send('meowmix is cool');
 });
 
 module.exports = router;
