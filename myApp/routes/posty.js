@@ -3,10 +3,7 @@ const router = expr.Router();
 
 
 router.post('/', function(req, res) {
-    const str = req.body['str'];
-    const response = {'originalString': str, 'stringLength': str.length};
-    res.render('postIndexFile', response);
-    // res.send('meowmix is cool');
+    res.render('postIndexFile', {'originalString': req.body['str'], 'stringLength': req.body['str'].length});
 });
 
 module.exports = router;
