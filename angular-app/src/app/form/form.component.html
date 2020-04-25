@@ -1,0 +1,17 @@
+<h3>App 2: Reactive Form</h3>
+<div>
+    <!-- <label>
+        Name:
+        <input type="text" [formGroup]="signinForm">
+    </label> -->
+    <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+        <label>
+            Query: <input type="text" formControlName="query" required>
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+    <p>Value: {{signinForm.status}}</p>
+    <div *ngIf="apiResults">
+        <app-form-results [results]="apiResults"></app-form-results>
+    </div>
+</div>
