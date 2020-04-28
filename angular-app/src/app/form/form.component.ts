@@ -24,12 +24,12 @@ export class FormComponent implements OnInit {
 
   onSubmit() {
     let val = this.signinForm.value.query;
-    console.log(val);
     this.configService.getActivity(val).subscribe(
       data => {this.apiResults = data},
       err => console.log(err),
       () => console.log('done!')
     );
+    console.log('fuck');
     console.log(this.apiResults);
   }
 
