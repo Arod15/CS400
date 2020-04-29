@@ -25,12 +25,10 @@ export class FormComponent implements OnInit {
   onSubmit() {
     let val = this.signinForm.value.query;
     this.configService.getActivity(val).subscribe(
-      data => {this.apiResults = data},
+      data => {this.apiResults = [data['activity']]},
       err => console.log(err),
       () => console.log('done!')
     );
-    console.log('fuck');
-    console.log(this.apiResults);
   }
 
   ngOnInit(): void {
